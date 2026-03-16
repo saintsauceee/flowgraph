@@ -11,9 +11,10 @@ interface Feature {
 
 interface Props {
   map: mapboxgl.Map | null;
+  onPointSelect?: (center: [number, number] | null) => void;
 }
 
-export default function SearchBar({ map }: Props) {
+export default function SearchBar({ map, onPointSelect }: Props) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Feature[]>([]);
   const [open, setOpen] = useState(false);
@@ -68,6 +69,7 @@ export default function SearchBar({ map }: Props) {
       .setLngLat(feature.center)
       .addTo(map);
 
+    onPointSelect?.(feature.center);
     map.flyTo({ center: feature.center, zoom: 15, speed: 1.8, curve: 1 });
   }
 
