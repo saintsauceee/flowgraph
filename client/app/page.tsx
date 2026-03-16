@@ -1,3 +1,9 @@
+import MapWrapper from "./components/MapWrapper";
+
 export default function Home() {
-  return <div />;
+  return (
+    <div className="w-screen h-screen">
+      <MapWrapper />
+    </div>
+  );
 }
