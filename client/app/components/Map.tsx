@@ -57,7 +57,7 @@ export default function Map() {
     <div className="relative w-full h-full">
       <div ref={containerRef} className="w-full h-full" />
       <SearchBar map={map} onPointSelect={setCurrentPoint} />
-      <div className="absolute top-4 right-4 flex flex-col gap-1">
+      <div className="absolute bottom-8 right-4 flex flex-col gap-1">
         <button
           onClick={() => handleZoom(1)}
           className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-white text-lg font-light flex items-center justify-center hover:bg-neutral-800 transition-colors"

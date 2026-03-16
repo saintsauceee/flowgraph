@@ -74,22 +74,22 @@ export default function SearchBar({ map, onPointSelect }: Props) {
   }
 
   return (
-    <div ref={containerRef} className="absolute top-4 left-1/2 -translate-x-1/2 w-96 z-10">
+    <div ref={containerRef} className="absolute top-4 left-4 w-72 z-10">
       <input
         type="text"
         value={query}
         onChange={handleChange}
         onFocus={() => results.length > 0 && setOpen(true)}
-        placeholder="Search for a road or place..."
-        className="w-full bg-neutral-900/90 backdrop-blur text-white text-sm placeholder-neutral-500 px-4 py-3 rounded-xl border border-neutral-700 outline-none focus:border-neutral-500 transition-colors"
+        placeholder="Search..."
+        className="w-full bg-neutral-700/90 backdrop-blur text-white text-xs placeholder-neutral-400 px-3 py-2 rounded-lg border border-white/40 outline-none focus:border-white/50 transition-colors"
       />
       {open && results.length > 0 && (
-        <ul className="mt-1 bg-neutral-900/95 backdrop-blur border border-neutral-700 rounded-xl overflow-hidden">
+        <ul className="mt-1 bg-neutral-900/95 backdrop-blur border border-neutral-800 rounded-lg overflow-hidden">
           {results.map((f, i) => (
             <li
               key={`${f.id}-${i}`}
               onMouseDown={() => handleSelect(f)}
-              className="px-4 py-2.5 text-sm text-neutral-300 hover:bg-neutral-800 cursor-pointer truncate"
+              className="px-3 py-2 text-xs text-neutral-400 hover:bg-neutral-800 hover:text-white cursor-pointer truncate transition-colors"
             >
               {f.place_name}
             </li>
