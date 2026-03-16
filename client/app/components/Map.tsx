@@ -61,7 +61,7 @@ export default function Map() {
         <button
           onClick={() => map?.flyTo({ center: [0, 20], zoom: 2, speed: 1.2 })}
           title="Home"
-          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-400 flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors mb-1"
+          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-200 flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors mb-1"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -70,13 +70,13 @@ export default function Map() {
         </button>
         <button
           onClick={() => handleZoom(1)}
-          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-white text-lg font-light flex items-center justify-center hover:bg-neutral-800 transition-colors"
+          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-200 text-lg font-light flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors"
         >
           +
         </button>
         <button
           onClick={() => handleZoom(-1)}
-          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-white text-lg font-light flex items-center justify-center hover:bg-neutral-800 transition-colors"
+          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-200 text-lg font-light flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors"
         >
           −
         </button>
@@ -84,7 +84,7 @@ export default function Map() {
           <button
             onClick={() => setSettingsOpen((o) => !o)}
             title="Settings"
-            className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-400 flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors"
+            className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-200 flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="3" />
