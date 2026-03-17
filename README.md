@@ -18,5 +18,5 @@ The left side is a map. The right side has a live news feed up top and a chat wi
 ## What's here
 
 - **Map** — dark Mapbox globe, search bar, zoom controls. The main canvas for everything.
-- **Live feed** — scrolling news headlines that update every few seconds. Fake for now.
-- **Assistant** — chat panel at the bottom right. Also fake for now, will connect to Claude.
+- **Live feed** — scrolling news headlines that update every few seconds. Simulated for now.
+- **Assistant** — chat panel at the bottom right. Also simulated for now, will connect to Claude.
