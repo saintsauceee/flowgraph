@@ -1,9 +1,5 @@
 # Flowgraph
-This is LA <3.
-
-A dark monitor interface meets trip planner. You're looking at the world, tracking what's happening, and figuring out where to go next.
-
-The left side is a map. The right side has a live news feed up top and a chat with an assistant below. The idea is that these three things talk to each other — a headline flies you to a location, the assistant knows where you're looking and helps you plan a trip there, pins accumulate into an itinerary.
+We're going on a trip, in our favorite rocket ship.
 
 ---
 
