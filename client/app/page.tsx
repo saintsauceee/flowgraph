@@ -5,6 +5,7 @@ import MapWrapper from "./components/MapWrapper";
 import NewsFeed from "./components/NewsFeed";
 import Chat from "./components/Chat";
 import Navbar from "./components/Navbar";
+import Board from "./components/Board";
 
 type View = "map" | "board";
 
@@ -16,9 +17,9 @@ export default function Home() {
       <Navbar view={view} onView={setView} />
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Left: Map */}
+        {/* Left: Map or Board */}
         <div className="relative h-full" style={{ width: "75%" }}>
-          <MapWrapper />
+          {view === "board" ? <Board /> : <MapWrapper />}
         </div>
 
         {/* Right: two stacked panels */}
