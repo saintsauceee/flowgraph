@@ -1,4 +1,5 @@
 import MapWrapper from "./components/MapWrapper";
+import NewsFeed from "./components/NewsFeed";
 
 export default function Home() {
   return (
@@ -10,9 +11,9 @@ export default function Home() {
 
       {/* Right: two stacked panels — 35% width */}
       <div className="flex flex-col h-full border-l border-neutral-700" style={{ width: "35%" }}>
-        {/* Top-right */}
-        <div className="bg-neutral-900 flex items-center justify-center" style={{ height: "35%" }}>
-          <span className="text-neutral-600 text-sm">top right</span>
+        {/* Top-right: News feed */}
+        <div className="bg-neutral-900 overflow-hidden" style={{ height: "35%" }}>
+          <NewsFeed />
         </div>
 
         {/* Bottom-right */}

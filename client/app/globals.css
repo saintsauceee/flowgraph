@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@keyframes pulse-once {
+  0%   { background-color: rgb(38 38 38); }
+  40%  { background-color: rgb(55 55 55); }
+  100% { background-color: transparent; }
+}
+
+.animate-pulse-once {
+  animation: pulse-once 1.2s ease-out forwards;
+}
+
 input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 10px;
