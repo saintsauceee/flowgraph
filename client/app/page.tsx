@@ -1,5 +1,6 @@
 import MapWrapper from "./components/MapWrapper";
 import NewsFeed from "./components/NewsFeed";
+import Chat from "./components/Chat";
 
 export default function Home() {
   return (
@@ -16,9 +17,9 @@ export default function Home() {
           <NewsFeed />
         </div>
 
-        {/* Bottom-right */}
-        <div className="flex-1 bg-neutral-900 border-t border-neutral-700 flex items-center justify-center">
-          <span className="text-neutral-600 text-sm">bottom right</span>
+        {/* Bottom-right: Chat */}
+        <div className="flex-1 bg-neutral-900 border-t border-neutral-700 overflow-hidden">
+          <Chat />
         </div>
       </div>
     </div>
