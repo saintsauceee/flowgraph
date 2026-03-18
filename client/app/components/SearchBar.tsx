@@ -61,8 +61,8 @@ export default function SearchBar({ map, onPointSelect }: Props) {
     const el = document.createElement("div");
     el.style.cssText = `
       width: 16px; height: 16px;
-      background: white; border-radius: 50%;
-      box-shadow: 0 0 0 3px rgba(255,255,255,0.25), 0 0 12px rgba(255,255,255,0.4);
+      background: #1f2937; border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(31,41,55,0.2), 0 0 12px rgba(31,41,55,0.3);
     `;
 
     markerRef.current = new mapboxgl.Marker({ element: el, anchor: "center" })
@@ -81,15 +81,15 @@ export default function SearchBar({ map, onPointSelect }: Props) {
         onChange={handleChange}
         onFocus={() => results.length > 0 && setOpen(true)}
         placeholder="Search..."
-        className="w-full bg-neutral-700/90 backdrop-blur text-white text-xs placeholder-neutral-400 px-3 py-2 rounded-lg border border-white/40 outline-none focus:border-white/50 transition-colors"
+        className="w-full bg-white/90 backdrop-blur text-gray-900 text-xs placeholder-gray-400 px-3 py-2 rounded-lg border border-gray-300 outline-none focus:border-gray-400 transition-colors"
       />
       {open && results.length > 0 && (
-        <ul className="mt-1 bg-neutral-900/95 backdrop-blur border border-neutral-800 rounded-lg overflow-hidden">
+        <ul className="mt-1 bg-white/95 backdrop-blur border border-gray-200 rounded-lg overflow-hidden">
           {results.map((f, i) => (
             <li
               key={`${f.id}-${i}`}
               onMouseDown={() => handleSelect(f)}
-              className="px-3 py-2 text-xs text-neutral-400 hover:bg-neutral-800 hover:text-white cursor-pointer truncate transition-colors"
+              className="px-3 py-2 text-xs text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer truncate transition-colors"
             >
               {f.place_name}
             </li>

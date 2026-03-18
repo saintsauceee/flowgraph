@@ -23,14 +23,14 @@ export default function Home() {
         </div>
 
         {/* Right: two stacked panels */}
-        <div className="flex flex-col h-full border-l border-neutral-700" style={{ width: "25%" }}>
+        <div className="flex flex-col h-full border-l border-gray-200" style={{ width: "25%" }}>
           {/* Top-right: News feed */}
-          <div className="bg-neutral-900 overflow-hidden" style={{ height: "35%" }}>
+          <div className="bg-gray-50 overflow-hidden" style={{ height: "35%" }}>
             <NewsFeed />
           </div>
 
           {/* Bottom-right: Chat */}
-          <div className="flex-1 bg-neutral-900 border-t border-neutral-700 overflow-hidden">
+          <div className="flex-1 bg-gray-50 border-t border-gray-200 overflow-hidden">
             <Chat />
           </div>
         </div>

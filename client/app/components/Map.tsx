@@ -23,7 +23,7 @@ export default function Map() {
 
     const m = new mapboxgl.Map({
       container: containerRef.current,
-      style: "mapbox://styles/mapbox/dark-v11",
+      style: "mapbox://styles/mapbox/light-v11",
       projection: "mercator",
       center: [0, 20],
       zoom: 2,
@@ -61,7 +61,7 @@ export default function Map() {
         <button
           onClick={() => map?.flyTo({ center: [0, 20], zoom: 2, speed: 1.2 })}
           title="Home"
-          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-200 flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors mb-1"
+          className="w-8 h-8 bg-white/90 backdrop-blur border border-gray-200 rounded-lg text-gray-600 flex items-center justify-center hover:bg-gray-50 hover:text-gray-900 transition-colors mb-1"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -70,13 +70,13 @@ export default function Map() {
         </button>
         <button
           onClick={() => handleZoom(1)}
-          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-200 text-lg font-light flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors"
+          className="w-8 h-8 bg-white/90 backdrop-blur border border-gray-200 rounded-lg text-gray-600 text-lg font-light flex items-center justify-center hover:bg-gray-50 hover:text-gray-900 transition-colors"
         >
           +
         </button>
         <button
           onClick={() => handleZoom(-1)}
-          className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-200 text-lg font-light flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors"
+          className="w-8 h-8 bg-white/90 backdrop-blur border border-gray-200 rounded-lg text-gray-600 text-lg font-light flex items-center justify-center hover:bg-gray-50 hover:text-gray-900 transition-colors"
         >
           −
         </button>
@@ -84,7 +84,7 @@ export default function Map() {
           <button
             onClick={() => setSettingsOpen((o) => !o)}
             title="Settings"
-            className="w-8 h-8 bg-neutral-900/90 backdrop-blur border border-neutral-700 rounded-lg text-neutral-200 flex items-center justify-center hover:bg-neutral-800 hover:text-white transition-colors"
+            className="w-8 h-8 bg-white/90 backdrop-blur border border-gray-200 rounded-lg text-gray-600 flex items-center justify-center hover:bg-gray-50 hover:text-gray-900 transition-colors"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="3" />
@@ -92,10 +92,10 @@ export default function Map() {
             </svg>
           </button>
           {settingsOpen && (
-            <div className="absolute right-10 top-0 bg-neutral-900/95 backdrop-blur border border-neutral-700 rounded-xl p-3 w-44">
+            <div className="absolute right-10 top-0 bg-white/95 backdrop-blur border border-gray-200 rounded-xl p-3 w-44">
               <div className="flex items-center justify-between mb-1">
-                <p className="text-neutral-500 text-xs">Zoom step</p>
-                <p className="text-white text-xs tabular-nums">{zoomStep}</p>
+                <p className="text-gray-500 text-xs">Zoom step</p>
+                <p className="text-gray-900 text-xs tabular-nums">{zoomStep}</p>
               </div>
               <input
                 type="range"
@@ -108,7 +108,7 @@ export default function Map() {
                 style={{
                   appearance: "none",
                   height: "1px",
-                  background: `linear-gradient(to right, #fff ${(ZOOM_STEPS.indexOf(zoomStep) / (ZOOM_STEPS.length - 1)) * 100}%, #404040 0%)`,
+                  background: `linear-gradient(to right, #374151 ${(ZOOM_STEPS.indexOf(zoomStep) / (ZOOM_STEPS.length - 1)) * 100}%, #e5e7eb 0%)`,
                   outline: "none",
                   borderRadius: "9999px",
                 }}

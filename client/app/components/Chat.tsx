@@ -61,8 +61,8 @@ export default function Chat() {
 
   return (
     <div className="w-full h-full flex flex-col overflow-hidden">
-      <div className="px-3 py-2 border-b border-neutral-700 shrink-0">
-        <span className="text-neutral-400 text-xs font-medium tracking-widest uppercase">Assistant</span>
+      <div className="px-3 py-2 border-b border-gray-200 shrink-0">
+        <span className="text-gray-500 text-xs font-medium tracking-widest uppercase">Assistant</span>
       </div>
 
       <div className="flex-1 overflow-y-auto px-3 py-2 flex flex-col gap-2">
@@ -71,8 +71,8 @@ export default function Chat() {
             <div
               className={`max-w-[80%] px-3 py-2 rounded-xl text-xs leading-snug ${
                 msg.role === "user"
-                  ? "bg-neutral-700 text-neutral-100 rounded-br-sm"
-                  : "bg-neutral-800 text-neutral-300 rounded-bl-sm"
+                  ? "bg-gray-200 text-gray-800 rounded-br-sm"
+                  : "bg-gray-100 text-gray-700 rounded-bl-sm"
               }`}
             >
               {msg.text}
@@ -81,29 +81,29 @@ export default function Chat() {
         ))}
         {thinking && (
           <div className="flex justify-start">
-            <div className="bg-neutral-800 px-3 py-2 rounded-xl rounded-bl-sm flex gap-1 items-center">
-              <span className="w-1 h-1 rounded-full bg-neutral-500 animate-bounce" style={{ animationDelay: "0ms" }} />
-              <span className="w-1 h-1 rounded-full bg-neutral-500 animate-bounce" style={{ animationDelay: "150ms" }} />
-              <span className="w-1 h-1 rounded-full bg-neutral-500 animate-bounce" style={{ animationDelay: "300ms" }} />
+            <div className="bg-gray-100 px-3 py-2 rounded-xl rounded-bl-sm flex gap-1 items-center">
+              <span className="w-1 h-1 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "0ms" }} />
+              <span className="w-1 h-1 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "150ms" }} />
+              <span className="w-1 h-1 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "300ms" }} />
             </div>
           </div>
         )}
         <div ref={bottomRef} />
       </div>
 
-      <div className="px-3 py-2 border-t border-neutral-700 shrink-0 flex gap-2">
+      <div className="px-3 py-2 border-t border-gray-200 shrink-0 flex gap-2">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKey}
           placeholder="Ask something…"
-          className="flex-1 bg-neutral-800 border border-neutral-700 rounded-lg px-3 py-1.5 text-xs text-neutral-200 placeholder-neutral-600 outline-none focus:border-neutral-500 transition-colors"
+          className="flex-1 bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-xs text-gray-800 placeholder-gray-400 outline-none focus:border-gray-400 transition-colors"
         />
         <button
           onClick={send}
           disabled={!input.trim() || thinking}
-          className="px-3 py-1.5 bg-neutral-700 hover:bg-neutral-600 disabled:opacity-30 disabled:cursor-not-allowed text-neutral-200 text-xs rounded-lg transition-colors"
+          className="px-3 py-1.5 bg-gray-200 hover:bg-gray-300 disabled:opacity-30 disabled:cursor-not-allowed text-gray-700 text-xs rounded-lg transition-colors"
         >
           Send
         </button>

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @keyframes pulse-once {
-  0%   { background-color: rgb(38 38 38); }
-  40%  { background-color: rgb(55 55 55); }
-  100% { background-color: transparent; }
+  0%   { background-color: rgb(229 229 229); }
+  40%  { background-color: rgb(209 209 209); }
+  100% { background-color: rgba(229 229 229 / 0); }
 }
 
 .animate-pulse-once {
@@ -15,7 +15,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: white;
+  background: #374151;
   cursor: pointer;
 }
 
@@ -24,6 +24,6 @@ input[type="range"]::-moz-range-thumb {
   height: 10px;
   border: none;
   border-radius: 50%;
-  background: white;
+  background: #374151;
   cursor: pointer;
 }

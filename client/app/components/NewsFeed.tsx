@@ -70,22 +70,22 @@ export default function NewsFeed() {
 
   return (
     <div className="w-full h-full flex flex-col overflow-hidden">
-      <div className="px-3 py-2 border-b border-neutral-700 shrink-0">
-        <span className="text-neutral-400 text-xs font-medium tracking-widest uppercase">Live Feed</span>
+      <div className="px-3 py-2 border-b border-gray-200 shrink-0">
+        <span className="text-gray-500 text-xs font-medium tracking-widest uppercase">Live Feed</span>
       </div>
       <div ref={listRef} className="flex-1 overflow-y-auto">
         {items.map((item, i) => (
           <div
             key={item.id}
-            className={`px-3 py-2.5 border-b border-neutral-800 ${i === 0 ? "animate-pulse-once" : ""}`}
+            className={`px-3 py-2.5 border-b border-gray-100 ${i === 0 ? "animate-pulse-once" : ""}`}
           >
             <div className="flex items-center gap-2 mb-0.5">
-              <span className="text-neutral-500 text-[10px] font-semibold uppercase tracking-wide">
+              <span className="text-gray-400 text-[10px] font-semibold uppercase tracking-wide">
                 {item.headline.source}
               </span>
-              <span className="text-neutral-700 text-[10px]">{timeAgo(now - item.timestamp)}</span>
+              <span className="text-gray-300 text-[10px]">{timeAgo(now - item.timestamp)}</span>
             </div>
-            <p className="text-neutral-300 text-xs leading-snug">{item.headline.title}</p>
+            <p className="text-gray-700 text-xs leading-snug">{item.headline.title}</p>
           </div>
         ))}
       </div>
